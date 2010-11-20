@@ -1,0 +1,34 @@
+8
+
+dir
+22
+https://virginkiss.svn.sourceforge.net/svnroot/virginkiss/test_android/src/com
+https://virginkiss.svn.sourceforge.net/svnroot/virginkiss
+
+
+
+2010-11-13T13:08:06.714939Z
+22
+kst924
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+db776246-ac5f-43aa-9d53-b513aa469f3e
+
+first_android
+dir
+
+virginkiss
+dir
+

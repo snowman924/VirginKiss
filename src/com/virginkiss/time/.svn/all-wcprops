@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/virginkiss/!svn/ver/21/test_android/src/com/virginkiss/time
+END
+ITime.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/virginkiss/!svn/ver/17/test_android/src/com/virginkiss/time/ITime.java
+END
+WorkTimeImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/virginkiss/!svn/ver/21/test_android/src/com/virginkiss/time/WorkTimeImpl.java
+END
+TimeImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svnroot/virginkiss/!svn/ver/17/test_android/src/com/virginkiss/time/TimeImpl.java
+END
+IWorkTime.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/virginkiss/!svn/ver/17/test_android/src/com/virginkiss/time/IWorkTime.java
+END

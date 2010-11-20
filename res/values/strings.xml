@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello Worladsfadfd, FirsActivity!</string>
+    <string name="app_name">first_android</string>
+    <string name="Input_Text">Input_Text</string>
+	<string name="Button_confirm">Confirm</string>
+	<string name="about_title">About</string>
+	<string name="about_text">About_textalskdjflaksjflaksjdflkj
+	
+	</string>
+<string name="DigitalClock">12:00:01</string>
+<string name="startTime">00:00:00</string>
+</resources>

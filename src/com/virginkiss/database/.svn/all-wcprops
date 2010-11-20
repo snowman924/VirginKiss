@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svnroot/virginkiss/!svn/ver/22/test_android/src/com/virginkiss/database
+END
+WorkStore.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/virginkiss/!svn/ver/22/test_android/src/com/virginkiss/database/WorkStore.java
+END
+IStore.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/virginkiss/!svn/ver/19/test_android/src/com/virginkiss/database/IStore.java
+END
+DBHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/virginkiss/!svn/ver/22/test_android/src/com/virginkiss/database/DBHelper.java
+END

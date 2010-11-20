@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+<AnalogClock android:id="@+id/AnalogClock01" 
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content">
+</AnalogClock>
+
+<TextView android:text="@string/DigitalClock" 
+	android:id="@+id/DigitalClock" 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content">		
+</TextView>
+
+<Button android:text="출근도장" 
+	android:id="@+id/TestButton" 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content">
+</Button>
+
+
+<TextView android:text="오늘출근시간"  
+ android:layout_width="wrap_content"
+  android:layout_height="wrap_content">
+  </TextView>
+  
+<TextView android:text="00:00:00" 
+android:id="@+id/startTime"  
+ android:layout_width="wrap_content"
+  android:layout_height="wrap_content">
+  </TextView>
+</LinearLayout>
