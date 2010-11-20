@@ -40,6 +40,13 @@ public class DBHelper extends SQLiteOpenHelper {
 		String sqlCommand = "CREATE TABLE " + TABLE_NAME + " (" + BaseColumns._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + TIME_NAME +" TEXT NOT NULL," + HOUR + " INTEGER," + MINUTE + " INTEGER);";
 		Log.v(LOG_TAG, "onCreate() sqlCommand:"+sqlCommand);
 		
+		
+		
+		
+		
+		
+		
+		
 		db.execSQL(sqlCommand);
 		
 		Log.d(LOG_TAG, "onCreate() >>>");
