@@ -14,6 +14,8 @@ import com.virginkiss.time.TimeImpl;
 public class WorkStore implements IStore {
 	private static final String LOG_TAG = "WorkStore";
 
+	public static final String TIME_NAME_TODAY_WORK_START_TIME = "today_work_start_time";
+	
 	private static final String[] FROM = {DBHelper.HOUR, DBHelper.MINUTE};
 	
 	private DBHelper dbHelper;
@@ -33,14 +35,19 @@ public class WorkStore implements IStore {
 
 	public Object loadData() {
 		SQLiteDatabase db = dbHelper.getReadableDatabase();
-		Cursor cursor = db.query(DBHelper.TABLE_NAME, FROM, null, null, null, null, null);
+		String where = DBHelper.TIME_NAME + "='" +TIME_NAME_TODAY_WORK_START_TIME + "'";
+		Cursor cursor = db.query(DBHelper.TABLE_NAME, FROM, where, null, null, null, null);
 		
-		cursor.moveToLast();
-		int hour = cursor.getInt(0);
-		int minute = cursor.getInt(1);
+		TimeImpl workTime = null;
 		
-		TimeImpl workTime = new TimeImpl(hour, minute);
-		
+		if(cursor.getCount() != 0){
+			cursor.moveToLast();
+			int hour = cursor.getInt(0);
+			int minute = cursor.getInt(1);
+			
+			workTime = new TimeImpl(hour, minute);	
+		}
+		cursor.close();
 		return (ITime)workTime;
 	}
 	
@@ -50,9 +57,20 @@ public class WorkStore implements IStore {
 		
 		Log.d(LOG_TAG, "saveDataToDB() time.getHour():" + time.getHour() + ", time.getMinute():"+time.getMinute());
 		
+		values.put(DBHelper.TIME_NAME, TIME_NAME_TODAY_WORK_START_TIME);
 		values.put(DBHelper.HOUR, time.getHour());
 		values.put(DBHelper.MINUTE, time.getMinute());
 		
-		db.insertOrThrow(DBHelper.TABLE_NAME, null, values);
+		//db.insertOrThrow(DBHelper.TABLE_NAME, null, values);
+		
+		String updateWhereClause = DBHelper.TIME_NAME + "='" +TIME_NAME_TODAY_WORK_START_TIME + "'";
+		int ret = db.update(DBHelper.TABLE_NAME, values, updateWhereClause, null);
+		if(ret==0){
+			db.insertOrThrow(DBHelper.TABLE_NAME, null, values);
+		}
+	}
+
+	public void close() {
+		dbHelper.close();
 	}
 }

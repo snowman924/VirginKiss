@@ -19,10 +19,11 @@ public class DBHelper extends SQLiteOpenHelper {
 	
 	public static final String HOUR = "hour";
 	public static final String MINUTE = "minute";
+	public static final String TIME_NAME = "time_name";
+	
+	private static final int DB_VERSION = 3;
 
-	private static final int DB_VERSION = 2;
-
-	private static final String TIME_NAME = "time_name";
+	
 	
 	public DBHelper(Context context) {
 		super(context, TABLE_NAME, null, DB_VERSION);
@@ -39,13 +40,6 @@ public class DBHelper extends SQLiteOpenHelper {
 		Log.d(LOG_TAG, "onCreate() <<<"); 
 		String sqlCommand = "CREATE TABLE " + TABLE_NAME + " (" + BaseColumns._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + TIME_NAME +" TEXT NOT NULL," + HOUR + " INTEGER," + MINUTE + " INTEGER);";
 		Log.v(LOG_TAG, "onCreate() sqlCommand:"+sqlCommand);
-		
-		
-		
-		
-		
-		
-		
 		
 		db.execSQL(sqlCommand);
 		
